@@ -4,10 +4,18 @@ import Stripe from "stripe"
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
+
+
+
+
+
+
+
+
 // placing user order for frontend
 const placeOrder = async (req,res) =>{
 
-    const frontend_url = "http://localhost:5173"
+    const frontend_url = "http://localhost:5173/"
 
 
     try {
@@ -35,9 +43,9 @@ const placeOrder = async (req,res) =>{
             price_data:{
                 currency:"BDT",
                 product_data:{
-                    name:"Delivery Charges"
+                    name:"Service Charges"
                 },
-                unit_amount:1*1*1
+                unit_amount:1*0*1
             },
             quantity:1
         })
@@ -73,6 +81,12 @@ const verifyOrder = async (req,res) => {
             res.json({success:false,message:"Error"})
         }
 }
+
+
+
+
+
+
 
 // user orders for frontend
 

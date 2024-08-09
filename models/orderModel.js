@@ -5,7 +5,7 @@ const orderSchema = new mongoose.Schema({
     items:{type:Array,required:true},
     amount:{type:Number,required:true},
     adress:{type:Object,required:true},
-    status:{type:String,default:"Waiting For Confirmations"},
+    status:{type:String,default:"Waiting For Confirmation"},
     date:{type:Date,default:Date.now()},
     payment:{type:Boolean,default:false}
 })
